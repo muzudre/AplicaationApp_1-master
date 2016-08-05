@@ -18,7 +18,7 @@ public class Contacts extends AppCompatActivity {
         setContentView(R.layout.activity_contacts);
 
         String url = "file:///android_asset/new/index.html";
-        WebView view = (WebView)findViewById(R.id.webView);
+        WebView view = (WebView)findViewById(R.id.mybrowser);
         view.getSettings().setJavaScriptEnabled(true);
         view.loadUrl(url);
         view.setWebViewClient(new MyBrowser());
