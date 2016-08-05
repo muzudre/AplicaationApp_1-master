@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">IN4FICT</string>
+    <string name="opem">open</string>
+    <string name="close">close</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_settings">Hi</string>
+    <string name="action_favorite">actionFavorite</string>
+    <string name="item1">Item1</string>
+    <string name="item2">Item2</string>
+    <string name="item3">About Author</string>
+    <string name="item4">Exit</string>
+
+
+    <string-array name="lectures">
+        <item>Mr. Mahdi Babai</item>
+        <item>Mr. Vinod</item>
+        <item>Mr. Matty</item>
+        <item>Mr. Mutaz</item>
+        <item>Mr. Mahdi Babai</item>
+        <item>Mr. Vinod</item>
+        <item>Mr. Matty</item>
+        <item>Mr. Mutaz</item>
+
+    </string-array>
+
+</resources>
