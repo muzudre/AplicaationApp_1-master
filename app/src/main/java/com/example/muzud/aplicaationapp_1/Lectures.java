@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -23,17 +25,22 @@ public class Lectures extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lectures);
 
-
-        ListView listView = (ListView) findViewById(R.id.listView2);
-        ArrayAdapter  arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.lectures));
-        listView.setAdapter(arrayAdapter);
-
-
-
+        String url = "file:///android_asset/new/lectures.html";
+        WebView view = (WebView)findViewById(R.id.webView3);
+        view.getSettings().setJavaScriptEnabled(true);
+        view.loadUrl(url);
+        view.setWebViewClient(new MyBrowser());
 
 
 
     }
 
+    private class MyBrowser extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url){
+            view.loadUrl(url);
+            return true;
+        }
+    }
 
 }

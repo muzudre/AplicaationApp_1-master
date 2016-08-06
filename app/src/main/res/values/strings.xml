@@ -11,16 +11,6 @@
     <string name="item4">Exit</string>
 
 
-    <string-array name="lectures">
-        <item>Mr. Mahdi Babai</item>
-        <item>Mr. Vinod</item>
-        <item>Mr. Matty</item>
-        <item>Mr. Mutaz</item>
-        <item>Mr. Mahdi Babai</item>
-        <item>Mr. Vinod</item>
-        <item>Mr. Matty</item>
-        <item>Mr. Mutaz</item>
 
-    </string-array>
 
 </resources>

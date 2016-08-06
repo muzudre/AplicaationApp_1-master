@@ -70,11 +70,11 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_favorite:
-                // User chose the "Favorite" action, mark the current item
-                // as a favorite...
+                Intent f = new Intent();
+
                 return true;
             case R.id.action_camera:
-                Intent camera = new Intent(this.getIntent().ACTION_AIRPLANE_MODE_CHANGED);
+                Intent camera = new Intent();
                 startActivity(camera);
 
                 return true;
