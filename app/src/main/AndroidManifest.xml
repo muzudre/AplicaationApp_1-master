@@ -125,11 +125,12 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".AboutMe"
+        <activity
+            android:name=".AboutMe"
             android:label="About Me"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme4"></activity>
+            android:theme="@style/AppTheme4" />
     </application>
 
 </manifest>

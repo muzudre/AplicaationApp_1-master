@@ -1,9 +1,11 @@
 package com.example.muzud.aplicaationapp_1;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Camera;
 import android.net.Uri;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -66,22 +68,28 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.action_settings:
-                // User chose the "Settings" item, show the app settings UI...
+                Intent Twit = new Intent(MainActivity.this, Twitter.class);
+                startActivity(Twit);
                 return true;
 
             case R.id.action_favorite:
-                Intent f = new Intent();
+
 
                 return true;
             case R.id.action_camera:
-                Intent camera = new Intent();
+
+                Intent camera = new Intent().setAction(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivity(camera);
 
                 return true;
             case R.id.item1:
+                Intent facebook = new Intent(MainActivity.this, Facebook.class);
+                startActivity(facebook);
 
                 return true;
             case R.id.item2:
+                Intent instag = new Intent(MainActivity.this, Instagram.class);
+                startActivity(instag);
 
                 return true;
             case R.id.item3:
@@ -91,6 +99,14 @@ public class MainActivity extends AppCompatActivity {
 
                 return true;
             case R.id.item4:
+
+                finish();
+                System.exit(0);
+
+                return true;
+            case R.id.item5:
+                Intent link = new Intent(MainActivity.this, Linkedin.class);
+                startActivity(link);
 
                 finish();
                 System.exit(0);
@@ -139,25 +155,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void insta(View view) {
-        Intent insta = new Intent(this, Instagram.class);
-        startActivity(insta);
-    }
-
-    public void face(View view) {
-        Intent insta = new Intent(this, Facebook.class);
-        startActivity(insta);
-    }
-
-    public void twit(View view) {
-        Intent insta = new Intent(this, Twitter.class);
-        startActivity(insta);
-    }
-
-    public void linkin(View view) {
-        Intent insta = new Intent(this, Linkedin.class);
-        startActivity(insta);
-    }
 
     @Override
     public void onStart() {
@@ -219,6 +216,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 2000);
     }
+
 
 
 }
